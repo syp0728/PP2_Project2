@@ -43,19 +43,22 @@
     
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Index</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Add</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">View</a><span class="sr-only">(current)</span>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link disabled">Edit</a>
-          </li>
-        </ul>
+            <li class="nav-item active">
+              <a class="nav-link" href="https://heroic-moxie-34b745.netlify.app/index.html">Index</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://heroic-moxie-34b745.netlify.app/add.html">Add</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="https://heroic-moxie-34b745.netlify.app/view.html">View</a><span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="https://heroic-moxie-34b745.netlify.app/edit.html">Edit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="https://heroic-moxie-34b745.netlify.app/style.html">Style</a>
+            </li>
+          </ul>
 
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -177,6 +180,46 @@
         alert("수정되었습니다"); 
         return false;
     }
+</script>
+
+<script>
+
+    // Function to handle edit button click
+    function handleViewButtonClick() {
+        window.location.href = "https://heroic-moxie-34b745.netlify.app/view.html"; // Redirect to the desired URL
+    }
+
+    // Function to handle edit button click
+    function handleEditButtonClick() {
+        window.location.href = "https://heroic-moxie-34b745.netlify.app/edit.html"; // Redirect to the desired URL
+    }
+
+    // Function to handle delete button click
+    function handleDeleteButtonClick() {
+        var confirmDelete = confirm("게시물을 삭제할까요?");
+        if (confirmDelete) {
+            alert("삭제되었습니다!");
+        }
+    }
+
+    // Add click event listeners to all edit buttons
+    var viewButtons = document.querySelectorAll(".btn-info");
+    viewButtons.forEach(function(button) {
+        button.addEventListener("click", handleViewButtonClick);
+    });
+
+    // Add click event listeners to all edit buttons
+    var editButtons = document.querySelectorAll(".btn-warning");
+    editButtons.forEach(function(button) {
+        button.addEventListener("click", handleEditButtonClick);
+    });
+
+    // Add click event listeners to all delete buttons
+    var deleteButtons = document.querySelectorAll(".btn-secondary");
+    deleteButtons.forEach(function(button) {
+        button.addEventListener("click", handleDeleteButtonClick);
+    });
+
 </script>
 </body>
 </html>
