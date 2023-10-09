@@ -67,7 +67,7 @@
               <th>Email</th>
               <th>Birthday</th>
               <th>Sex</th>
-              <th>Fuction</th>
+              <th>Function</th>
             </tr>
           </thead>
           <tbody>
@@ -240,35 +240,64 @@
                     </td>
                     </tr>
                     <tr>
-                      <td>신솜이</td>
-                      <td>010-0000-0000</td>
-                      <td>ww@hanmail.net</td>
-                      <td>00.00.00</td>
-                      <td>female</td>
-                      <td>
-                        <a class="btn btn-info" href="#">view</a>
-                        <a class="btn btn-warning" href="#">edit</a>
-                        <a class="btn btn-secondary" href="#">delete</a>
-                    </td>
-                    </tr>
-                    <tr>
-                      <td>박준형</td>
-                      <td>010-0000-0000</td>
-                      <td>ee@naver.com</td>
-                      <td>00.00.00</td>
-                      <td>male</td>
-                      <td>
-                        <a class="btn btn-info" href="#">view</a>
-                        <a class="btn btn-warning" href="#">edit</a>
-                        <a class="btn btn-secondary" href="#">delete</a>
-                    </td>
-                    </tr>
-          </tbody>
+                        <td>신솜이</td>
+                        <td>010-0000-0000</td>
+                        <td>ww@hanmail.net</td>
+                        <td>00.00.00</td>
+                        <td>female</td>
+                        <td>
+                          <a class="btn btn-info" href="#">view</a>
+                          <a class="btn btn-warning" href="#">edit</a>
+                          <a class="btn btn-secondary" href="#">delete</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>박준형</td>
+                        <td>010-0000-0000</td>
+                        <td>ee@naver.com</td>
+                        <td>00.00.00</td>
+                        <td>male</td>
+                        <td>
+                          <a class="btn btn-info" href="#">view</a>
+                          <a class="btn btn-warning" href="#">edit</a>
+                          <a class="btn btn-secondary" href="#">delete</a>
+                      </td>
+                      </tr>
+            </tbody>
         </table>
       </div>
       
     <!-- Include Bootstrap JavaScript and jQuery (optional) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+        // Function to handle delete button click
+        function handleDeleteButtonClick() {
+            var confirmDelete = confirm("게시물을 삭제할까요?");
+            if (confirmDelete) {
+                alert("삭제되었습니다!");
+            }
+        }
+    
+        // Function to handle edit button click
+        function handleEditButtonClick() {
+            alert("게시물이 추가됩니다");
+            // You can add your edit logic here
+        }
+    
+        // Add click event listeners to all delete buttons
+        var deleteButtons = document.querySelectorAll(".btn-secondary");
+        deleteButtons.forEach(function(button) {
+            button.addEventListener("click", handleDeleteButtonClick);
+        });
+    
+        // Add click event listeners to all edit buttons
+        var editButtons = document.querySelectorAll(".btn-warning");
+        editButtons.forEach(function(button) {
+            button.addEventListener("click", handleEditButtonClick);
+        });
+    </script>
 </body>
 </html>
