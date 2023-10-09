@@ -1,82 +1,274 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>추가하고 싶은 친구를 적어주세요</title>
-</head>
-
-<body>
-    <h1>추가하고 싶은 친구를 적어주세요</h1>
-
-    <form id="friendForm" onsubmit="return ValidateForm()">
-        <h2>이름</h2>
-        <input type="text" id="fname" name="fname" value="" required><br>
-
-        <h2>전화번호</h2>
-        <input type="text" id="phone1" name="phone1" value="" required>
-        <label for="phone1">-</label>
-        <input type="text" id="phone2" name="phone2" value="" required>
-        <label for="phone2">-</label>
-        <input type="text" id="phone3" name="phone3" value="" required><br>
-
-        <h2>이메일주소</h2>
-        <input type="text" id="emailName" name="emailName" value="" required>
-        <label for="emailName">@</label>
-        <select id="emailDomain" name="emailDomain">
-            <option value="naver">naver.com</option>
-            <option value="gmail">gmail.com</option>
-            <option value="hanmail">hanmail.net</option>
-            <option value="handong">handong.ac.kr</option>
-        </select><br>
-
-        <h2>생일</h2>
-        <input type="text" id="birthYear" name="birthYear" value="" required>
-        <label for="birthYear">년</label>
-        <select id="birthMonth" name="birthMonth">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-        </select>
-        <label for="birthMonth">월</label>
-        <input type="text" id="birthDay" name="birthDay" value="" required>
-        <label for="birthDay">일</label><br>
-
-        <h2>성별</h2>
-        <input type="radio" id="male" name="sex" value="남" required>
-        <label for="male">남</label><br>
-        <input type="radio" id="female" name="sex" value="여"required>
-        <label for="female">여</label><br><br>
-
-        <button type="submit">추가</button>
-    </form>
-
-    <script>
-        function ValidateForm() {
-            // Add your form validation logic here
-            var fname = document.getElementById("fname").value;
-            var phone1 = document.getElementById("phone1").value;
-            var phone2 = document.getElementById("phone2").value;
-            var phone3 = document.getElementById("phone3").value;
-            var emailName = document.getElementById("emailName").value;
-            var birthYear = document.getElementById("birthYear").value;
-            var birthMonth = document.getElementById("birthMonth").value;
-            var birthDay = document.getElementById("birthDay").value;
-
-
-            alert("게시물이 추가됩니다"); 
-            return false;
+    <title>Table with CSS</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom CSS for the button section */
+        .button-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
         }
-    </script>
+        .button-section a {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1130.0" data-gr-ext-installed="">
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Friends</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Index</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">View</a><span class="sr-only">(current)</span>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link disabled">Edit</a>
+          </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    
+    <main role="main" class="container">
+    
+      <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead"></p>
+      </div>
+    
+    </main>
+    
+    <h2>Friends List</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Birthday</th>
+              <th>Sex</th>
+              <th>Fuction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>박지혜</td>
+              <td>010-1010-1010</td>
+              <td>wisdom@naver.com</td>
+              <td>03.03.31</td>
+              <td>female</td>
+              <td>
+                <a class="btn btn-info" href="#">view</a>
+                <a class="btn btn-warning" href="#">edit</a>
+                <a class="btn btn-secondary" href="#">delete</a>
+            </td>
+            </tr>
+            <tr>
+                <td>이하늘</td>
+                <td>010-2020-2020</td>
+                <td>sky@gamil.com</td>
+                <td>02.11.29</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="#">view</a>
+                    <a class="btn btn-warning" href="#">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>최하민</td>
+                <td>010-3030-3030</td>
+                <td>greatest@handong.ac.kr</td>
+                <td>03.03.02</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="#">view</a>
+                    <a class="btn btn-warning" href="#">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>이도연</td>
+                <td>010-4040-4040</td>
+                <td>doyeon@hanmail.net</td>
+                <td>03.08.29</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="#">view</a>
+                    <a class="btn btn-warning" href="#">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>김예빈</td>
+                <td>010-5050-5050</td>
+                <td>beeny@gamil.com</td>
+                <td>04.12.29</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="#">view</a>
+                    <a class="btn btn-warning" href="#">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>나지은</td>
+                <td>010-6060-6060</td>
+                <td>itsme@handong.ac.kr</td>
+                <td>00.09.30</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="#">view</a>
+                    <a class="btn btn-warning" href="#">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>김덕진</td>
+                <td>010-7070-7070</td>
+                <td>jeans@handong.ac.kr</td>
+                <td>94.07.23</td>
+                <td>male</td>
+                <td>
+                    <a class="btn btn-info" href="#">view</a>
+                    <a class="btn btn-warning" href="#">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>정철호</td>
+                <td>010-8080-8080</td>
+                <td>tiger@naver.com</td>
+                <td>97.04.14</td>
+                <td>male</td>
+                <td>
+                    <a class="btn btn-info" href="#">view</a>
+                    <a class="btn btn-warning" href="#">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>장순호</td>
+                <td>010-9090-9090</td>
+                <td>captain@hanmeil.net</td>
+                <td>89.06.07</td>
+                <td>male</td>
+                <td>
+                    <a class="btn btn-info" href="#">view</a>
+                    <a class="btn btn-warning" href="#">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>김선우</td>
+                <td>010-0101-0101</td>
+                <td>cow@gamil.com</td>
+                <td>99.09.09</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="#">view</a>
+                    <a class="btn btn-warning" href="#">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+                    <tr>
+                      <td>신현옥</td>
+                      <td>010-0202-0202</td>
+                      <td>soshin@naver.com</td>
+                      <td>64.07.22</td>
+                      <td>female</td>
+                      <td>
+                        <a class="btn btn-info" href="#">view</a>
+                        <a class="btn btn-warning" href="#">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>박병주</td>
+                      <td>010-0303-0303</td>
+                      <td>whitebear@naver.com</td>
+                      <td>63.09.21</td>
+                      <td>male</td>
+                      <td>
+                        <a class="btn btn-info" href="#">view</a>
+                        <a class="btn btn-warning" href="#">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>박재형</td>
+                      <td>010-0404-0404</td>
+                      <td>jhp@naver.com</td>
+                      <td>94.01.04</td>
+                      <td>male</td>
+                      <td>
+                        <a class="btn btn-info" href="#">view</a>
+                        <a class="btn btn-warning" href="#">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>황지온</td>
+                      <td>010-0000-0000</td>
+                      <td>qq@gmail.com</td>
+                      <td>00.00.00</td>
+                      <td>female</td>
+                      <td>
+                        <a class="btn btn-info" href="#">view</a>
+                        <a class="btn btn-warning" href="#">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>신솜이</td>
+                      <td>010-0000-0000</td>
+                      <td>ww@hanmail.net</td>
+                      <td>00.00.00</td>
+                      <td>female</td>
+                      <td>
+                        <a class="btn btn-info" href="#">view</a>
+                        <a class="btn btn-warning" href="#">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>박준형</td>
+                      <td>010-0000-0000</td>
+                      <td>ee@naver.com</td>
+                      <td>00.00.00</td>
+                      <td>male</td>
+                      <td>
+                        <a class="btn btn-info" href="#">view</a>
+                        <a class="btn btn-warning" href="#">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+          </tbody>
+        </table>
+      </div>
+      
+    <!-- Include Bootstrap JavaScript and jQuery (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
-
