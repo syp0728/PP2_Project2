@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>추가하고 싶은 친구를 적어주세요</h1>
+
+        <h2>이름</h2>
+        <input type="text" id="fname" name="fname" value=""><br>
+
+        <h2>전화번호</h2>
+        <input type="text" id="phone" name="phone" value="">
+        <label for="phone">-</label>
+        <input type="text" id="phone" name="phone" value="">
+        <label for="phone">-</label>
+        <input type="text" id="phone" name="phone" value=""><br>
+
+        <h2>이메일주소</h2>
+        <input type="text" id="fname" name="email" value="">
+        <label for="email">@</label>
+    <select id="email" name="delivery">
+        <option value="naver">naver.com</option>
+        <option value="gmail">gmail.com</option>
+        <option value="hanmail">hanmail.net</option>
+        <option value="handong">handong.ac.kr</option>
+    </select><br>
+
+    <h2>생일</h2>
+        <input type="text" id="fname" name="birth" value="">
+        <label for="birth">년</label>
+    <select id="birth" name="birth">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    <label for="birth">월</label>
+        <input type="text" id="fname" name="birth" value="">
+        <label for="birth">일</label>
+    </form><br>
+
+    <h2>성별</h2>
+    <input type="radio" id="남" name="sex" value="남">
+    <label for="남">남</label><br>
+    <input type="radio" id="여" name="sex" value="여">
+    <label for="여">여</label><br><br>
+
+
+<button onclick="submit()">추가</button> 
+<script>
+    function submit() {
+        alert("게시물이 추가됩니다")
+    }
+</script>
+
+
+</body>
+</html>
+
+
+
