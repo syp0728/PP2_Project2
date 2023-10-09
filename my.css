@@ -1,0 +1,55 @@
+/* Custom styles for RWD */
+
+/* Mobile-first approach: Styles for small screens */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* Responsive navigation menu */
+.navbar-toggler-icon {
+    color: #fff;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+/* Styles for larger screens (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .navbar-toggler-icon {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+}
+
+/* Additional custom styles */
+.button-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+.button-section a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Add any other custom styles you need for your application */
