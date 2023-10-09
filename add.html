@@ -20,7 +20,7 @@
         <input type="text" id="phone3" name="phone3" value="" required><br>
 
         <h2>이메일주소</h2>
-        <input type="text" id="emailName" name="emailName" value="">
+        <input type="text" id="emailName" name="emailName" value="" required>
         <label for="emailName">@</label>
         <select id="emailDomain" name="emailDomain">
             <option value="naver">naver.com</option>
@@ -30,21 +30,30 @@
         </select><br>
 
         <h2>생일</h2>
-        <input type="text" id="birthYear" name="birthYear" value="">
+        <input type="text" id="birthYear" name="birthYear" value="" required>
         <label for="birthYear">년</label>
         <select id="birthMonth" name="birthMonth">
             <option value="1">1</option>
             <option value="2">2</option>
-            <!-- Add more months as needed -->
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
         </select>
         <label for="birthMonth">월</label>
-        <input type="text" id="birthDay" name="birthDay" value="">
+        <input type="text" id="birthDay" name="birthDay" value="" required>
         <label for="birthDay">일</label><br>
 
         <h2>성별</h2>
-        <input type="radio" id="male" name="sex" value="남">
+        <input type="radio" id="male" name="sex" value="남" required>
         <label for="male">남</label><br>
-        <input type="radio" id="female" name="sex" value="여">
+        <input type="radio" id="female" name="sex" value="여"required>
         <label for="female">여</label><br><br>
 
         <button type="submit">추가</button>
@@ -62,14 +71,8 @@
             var birthMonth = document.getElementById("birthMonth").value;
             var birthDay = document.getElementById("birthDay").value;
 
-            // Perform validation checks, e.g., check if fields are empty or in the correct format
 
-            // If validation passes, you can submit the form
-            // If validation fails, you can display an error message or prevent form submission
-
-            alert("게시물이 추가됩니다"); // For demonstration purposes
-
-            // Prevent form submission for demonstration
+            alert("게시물이 추가됩니다"); 
             return false;
         }
     </script>
