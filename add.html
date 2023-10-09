@@ -1,67 +1,79 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <title>추가하고 싶은 친구를 적어주세요</title>
+</head>
+
 <body>
     <h1>추가하고 싶은 친구를 적어주세요</h1>
 
+    <form id="friendForm" onsubmit="return ValidateForm()">
         <h2>이름</h2>
-        <input type="text" id="fname" name="fname" value=""><br>
+        <input type="text" id="fname" name="fname" value="" required><br>
 
         <h2>전화번호</h2>
-        <input type="text" id="phone" name="phone" value="">
-        <label for="phone">-</label>
-        <input type="text" id="phone" name="phone" value="">
-        <label for="phone">-</label>
-        <input type="text" id="phone" name="phone" value=""><br>
+        <input type="text" id="phone1" name="phone1" value="" required>
+        <label for="phone1">-</label>
+        <input type="text" id="phone2" name="phone2" value="" required>
+        <label for="phone2">-</label>
+        <input type="text" id="phone3" name="phone3" value="" required><br>
 
         <h2>이메일주소</h2>
-        <input type="text" id="fname" name="email" value="">
-        <label for="email">@</label>
-    <select id="email" name="delivery">
-        <option value="naver">naver.com</option>
-        <option value="gmail">gmail.com</option>
-        <option value="hanmail">hanmail.net</option>
-        <option value="handong">handong.ac.kr</option>
-    </select><br>
+        <input type="text" id="emailName" name="emailName" value="">
+        <label for="emailName">@</label>
+        <select id="emailDomain" name="emailDomain">
+            <option value="naver">naver.com</option>
+            <option value="gmail">gmail.com</option>
+            <option value="hanmail">hanmail.net</option>
+            <option value="handong">handong.ac.kr</option>
+        </select><br>
 
-    <h2>생일</h2>
-        <input type="text" id="fname" name="birth" value="">
-        <label for="birth">년</label>
-    <select id="birth" name="birth">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-    </select>
-    <label for="birth">월</label>
-        <input type="text" id="fname" name="birth" value="">
-        <label for="birth">일</label>
-    </form><br>
+        <h2>생일</h2>
+        <input type="text" id="birthYear" name="birthYear" value="">
+        <label for="birthYear">년</label>
+        <select id="birthMonth" name="birthMonth">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <!-- Add more months as needed -->
+        </select>
+        <label for="birthMonth">월</label>
+        <input type="text" id="birthDay" name="birthDay" value="">
+        <label for="birthDay">일</label><br>
 
-    <h2>성별</h2>
-    <input type="radio" id="남" name="sex" value="남">
-    <label for="남">남</label><br>
-    <input type="radio" id="여" name="sex" value="여">
-    <label for="여">여</label><br><br>
+        <h2>성별</h2>
+        <input type="radio" id="male" name="sex" value="남">
+        <label for="male">남</label><br>
+        <input type="radio" id="female" name="sex" value="여">
+        <label for="female">여</label><br><br>
 
+        <button type="submit">추가</button>
+    </form>
 
-<button onclick="submit()">추가</button> 
-<script>
-    function submit() {
-        alert("게시물이 추가됩니다")
-    }
-</script>
+    <script>
+        function ValidateForm() {
+            // Add your form validation logic here
+            var fname = document.getElementById("fname").value;
+            var phone1 = document.getElementById("phone1").value;
+            var phone2 = document.getElementById("phone2").value;
+            var phone3 = document.getElementById("phone3").value;
+            var emailName = document.getElementById("emailName").value;
+            var birthYear = document.getElementById("birthYear").value;
+            var birthMonth = document.getElementById("birthMonth").value;
+            var birthDay = document.getElementById("birthDay").value;
 
+            // Perform validation checks, e.g., check if fields are empty or in the correct format
 
+            // If validation passes, you can submit the form
+            // If validation fails, you can display an error message or prevent form submission
+
+            alert("게시물이 추가됩니다"); // For demonstration purposes
+
+            // Prevent form submission for demonstration
+            return false;
+        }
+    </script>
 </body>
+
 </html>
-
-
 
