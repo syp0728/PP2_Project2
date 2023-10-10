@@ -77,34 +77,6 @@
     </main>
     
     <h2>Friends List</h2>
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Phone Number</th>
-              <th>Email</th>
-              <th>Birthday</th>
-              <th>Sex</th>
-              <th>Function</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>박지혜</td>
-              <td>010-1010-1010</td>
-              <td>wisdom@naver.com</td>
-              <td>03.03.31</td>
-              <td>female</td>
-              <td>
-                <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/view.html">view</a>
-                <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
-                <a class="btn btn-secondary" href="#">delete</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-    </div>
 
     <!-- Square container for form content -->
     <div class="square-container"><center>
@@ -160,6 +132,8 @@
             <button type="submit">수정</button>
     </form>    
 </div></center>
+<center><a class="btn btn-primary" href="https://heroic-moxie-34b745.netlify.app/index.html">Index</a></center>
+
 
 <!-- Include Bootstrap JavaScript and jQuery (optional) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -180,46 +154,6 @@
         alert("수정되었습니다"); 
         return false;
     }
-</script>
-
-<script>
-
-    // Function to handle edit button click
-    function handleViewButtonClick() {
-        window.location.href = "https://heroic-moxie-34b745.netlify.app/view.html"; // Redirect to the desired URL
-    }
-
-    // Function to handle edit button click
-    function handleEditButtonClick() {
-        window.location.href = "https://heroic-moxie-34b745.netlify.app/edit.html"; // Redirect to the desired URL
-    }
-
-    // Function to handle delete button click
-    function handleDeleteButtonClick() {
-        var confirmDelete = confirm("게시물을 삭제할까요?");
-        if (confirmDelete) {
-            alert("삭제되었습니다!");
-        }
-    }
-
-    // Add click event listeners to all edit buttons
-    var viewButtons = document.querySelectorAll(".btn-info");
-    viewButtons.forEach(function(button) {
-        button.addEventListener("click", handleViewButtonClick);
-    });
-
-    // Add click event listeners to all edit buttons
-    var editButtons = document.querySelectorAll(".btn-warning");
-    editButtons.forEach(function(button) {
-        button.addEventListener("click", handleEditButtonClick);
-    });
-
-    // Add click event listeners to all delete buttons
-    var deleteButtons = document.querySelectorAll(".btn-secondary");
-    deleteButtons.forEach(function(button) {
-        button.addEventListener("click", handleDeleteButtonClick);
-    });
-
 </script>
 </body>
 </html>
