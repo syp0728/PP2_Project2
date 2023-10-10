@@ -1,64 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table with CSS</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom CSS for the button section */
+        .button-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+        .button-section a {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1130.0" data-gr-ext-installed="">
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Friends</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://heroic-moxie-34b745.netlify.app/index.html">Index</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://heroic-moxie-34b745.netlify.app/view.html">View</a><span class="sr-only">(current)</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://heroic-moxie-34b745.netlify.app/add.html">Add</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="https://heroic-moxie-34b745.netlify.app/edit.html">Edit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://heroic-moxie-34b745.netlify.app/style.html">Style</a>
+          </li>
+        </ul>
 
- <!DOCTYPE html>
- <html>
- 
- <head>
-     <style>
-         body {
-             background-color: #f7f7f7;
-             font-family: Arial, sans-serif;
-             text-align: center;
-             margin: 0;
-             padding: 0;
-         }
- 
-         #box {
-             background-color: #ffffff;
-             width: 400px;
-             margin: 50px auto;
-             padding: 30px;
-             border: 2px solid #000000;
-             border-radius: 10px;
-             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-         }
- 
-         h1 {
-             font-size: 36px;
-             color: #000000;
-             margin-bottom: 20px;
-         }
- 
-         .form-signin {
-             text-align: center;
-         }
- 
-         a {
-             text-decoration: none;
-             font-size: 24px;
-             color: #000000;
-             display: block;
-             margin-bottom: 10px;
-             transition: color 0.3s ease;
-         }
- 
-         a:hover {
-             color: #000000;
-         }
-     </style>
- </head>
- 
- <body>
-     <div id="box">
-         <h1>22200286's <br> Friends List Index</h1>
-         <form class="form-signin">
-            <a href="https://heroic-moxie-34b745.netlify.app/index.html">Index</a>
-            <a href="https://heroic-moxie-34b745.netlify.app/view.html">View</a>
-            <a href="https://heroic-moxie-34b745.netlify.app/view.html">Add</a>
-            <a href="https://heroic-moxie-34b745.netlify.app/view.html">Edit</a>
-            <a href="https://heroic-moxie-34b745.netlify.app/view.html">Style</a>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
-     </div>
- </body>
- 
- </html>
- 
+      </div>
+    </nav>
+    
+    <main role="main" class="container">
+    
+      <div class="starter-template">
+        <h1>Bootstrap starter template</h1>
+        <p class="lead"></p>
+      </div>
+    
+    </main>
+    
+    <h2>Friends List</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Birthday</th>
+              <th>Sex</th>
+              <th>Function</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>박지혜</td>
+              <td>010-1010-1010</td>
+              <td>wisdom@naver.com</td>
+              <td>03.03.31</td>
+              <td>female</td>
+              <td>
+                <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                <a class="btn btn-secondary" href="#">delete</a>
+            </td>
+            </tr>
+            <tr>
+                <td>이하늘</td>
+                <td>010-2020-2020</td>
+                <td>sky@gamil.com</td>
+                <td>02.11.29</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                    <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>최하민</td>
+                <td>010-3030-3030</td>
+                <td>greatest@handong.ac.kr</td>
+                <td>03.03.02</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                    <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>이도연</td>
+                <td>010-4040-4040</td>
+                <td>doyeon@hanmail.net</td>
+                <td>03.08.29</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                    <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>김예빈</td>
+                <td>010-5050-5050</td>
+                <td>beeny@gamil.com</td>
+                <td>04.12.29</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                    <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>나지은</td>
+                <td>010-6060-6060</td>
+                <td>itsme@handong.ac.kr</td>
+                <td>00.09.30</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                    <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>김덕진</td>
+                <td>010-7070-7070</td>
+                <td>jeans@handong.ac.kr</td>
+                <td>94.07.23</td>
+                <td>male</td>
+                <td>
+                    <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                    <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>정철호</td>
+                <td>010-8080-8080</td>
+                <td>tiger@naver.com</td>
+                <td>97.04.14</td>
+                <td>male</td>
+                <td>
+                    <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                    <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>장순호</td>
+                <td>010-9090-9090</td>
+                <td>captain@hanmeil.net</td>
+                <td>89.06.07</td>
+                <td>male</td>
+                <td>
+                    <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                    <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td>김선우</td>
+                <td>010-0101-0101</td>
+                <td>cow@gamil.com</td>
+                <td>99.09.09</td>
+                <td>female</td>
+                <td>
+                    <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                    <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                    <a class="btn btn-secondary" href="#">delete</a>
+                </td>
+              </tr>
+                    <tr>
+                      <td>신현옥</td>
+                      <td>010-0202-0202</td>
+                      <td>soshin@naver.com</td>
+                      <td>64.07.22</td>
+                      <td>female</td>
+                      <td>
+                        <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                        <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>박병주</td>
+                      <td>010-0303-0303</td>
+                      <td>whitebear@naver.com</td>
+                      <td>63.09.21</td>
+                      <td>male</td>
+                      <td>
+                        <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                        <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>박재형</td>
+                      <td>010-0404-0404</td>
+                      <td>jhp@naver.com</td>
+                      <td>94.01.04</td>
+                      <td>male</td>
+                      <td>
+                        <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                        <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>황지온</td>
+                      <td>010-0000-0000</td>
+                      <td>qq@gmail.com</td>
+                      <td>00.00.00</td>
+                      <td>female</td>
+                      <td>
+                        <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                        <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                        <a class="btn btn-secondary" href="#">delete</a>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>신솜이</td>
+                        <td>010-0000-0000</td>
+                        <td>ww@hanmail.net</td>
+                        <td>00.00.00</td>
+                        <td>female</td>
+                        <td>
+                            <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                            <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                            <a class="btn btn-secondary" href="#">delete</a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>박준형</td>
+                        <td>010-0000-0000</td>
+                        <td>ee@naver.com</td>
+                        <td>00.00.00</td>
+                        <td>male</td>
+                        <td>
+                            <a class="btn btn-info" href="https://heroic-moxie-34b745.netlify.app/add.html">add</a>
+                            <a class="btn btn-warning" href="https://heroic-moxie-34b745.netlify.app/edit.html">edit</a>
+                            <a class="btn btn-secondary" href="#">delete</a>
+                      </td>
+                      </tr>
+            </tbody>
+        </table>
+      </div>
+      
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+        function handleDeleteButtonClick() {
+            var confirmDelete = confirm("게시물을 삭제할까요?");
+            if (confirmDelete) {
+                alert("삭제되었습니다!");
+            }
+        }
+
+        var deleteButtons = document.querySelectorAll(".btn-secondary");
+        deleteButtons.forEach(function(button) {
+            button.addEventListener("click", handleDeleteButtonClick);
+        });
+
+    </script>
+    
+</body>
+</html>
+
