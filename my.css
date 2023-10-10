@@ -1,55 +1,35 @@
-/* Custom styles for RWD */
+/* my.css */
 
-/* Mobile-first approach: Styles for small screens */
-body {
-    font-size: 16px;
-    line-height: 1.5;
+/* Styles for the square container */
+.square-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
     padding: 20px;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
 }
 
-/* Responsive navigation menu */
-.navbar-toggler-icon {
-    color: #fff;
+/* Styles for phone input fields */
+.phone-input {
+    width: 80px;
 }
 
-.navbar-nav {
-    text-align: center;
+/* Styles for birthday input fields */
+.birthday-input {
+    width: 80px;
 }
 
-.nav-item {
-    margin-bottom: 10px;
+/* Additional styles for the confirmation button */
+.btn-secondary {
+    background-color: #d9534f;
+    color: white;
+    border-color: #d9534f;
 }
 
-/* Styles for larger screens (e.g., tablets and desktops) */
-@media (min-width: 768px) {
-    body {
-        font-size: 18px;
-    }
-
-    .navbar-toggler-icon {
-        display: none;
-    }
-
-    .navbar-nav {
-        flex-direction: row;
-    }
-
-    .nav-item {
-        margin-bottom: 0;
-        margin-right: 20px;
-    }
+.btn-secondary:hover {
+    background-color: #c9302c;
+    border-color: #c9302c;
 }
 
-/* Additional custom styles */
-.button-section {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-}
-
-.button-section a {
-    display: block;
-    margin-bottom: 10px;
-}
-
-/* Add any other custom styles you need for your application */
+/* Add any other styles you need in your "my.css" file */

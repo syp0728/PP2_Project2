@@ -2,10 +2,8 @@
 <html>
 <head>
     <title>Table with CSS</title>
-    <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Add custom CSS for the button section */
         .button-section {
             background-color: #f8f9fa;
             padding: 20px;
@@ -15,7 +13,6 @@
             display: block;
             margin-bottom: 10px;
         }
-        /* Square container for form content */
         .square-container {
             background-color: #fff;
             border: 1px solid #ccc;
@@ -24,9 +21,8 @@
             height: 500px; 
             margin: 0 auto;
         }
-        /* Adjust the width of phone number input fields */
         .phone-input {
-            width: 80px; /* Adjust the width as needed */
+            width: 80px; 
         }
         .birthday-input {
             width: 80px;
@@ -78,10 +74,9 @@
     
     <h2>Friends List</h2>
 
-    <!-- Square container for form content -->
     <div class="square-container"><center>
         <h5>수정하고 싶은 내용을 적어주세요</h5><br>
-        <form id="friendForm" onsubmit="return ValidateForm()">
+          <form id="friendForm" onsubmit="return confirmEdit()">
             <h7>이름:</h7>
             <input type="text" id="fname" name="fname" value="" required><br><br>
     
@@ -135,12 +130,10 @@
 <center><a class="btn btn-primary" href="https://heroic-moxie-34b745.netlify.app/index.html">Index</a></center>
 
 
-<!-- Include Bootstrap JavaScript and jQuery (optional) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
     function ValidateForm() {
-        // Add your form validation logic here
         var fname = document.getElementById("fname").value;
         var phone1 = document.getElementById("phone1").value;
         var phone2 = document.getElementById("phone2").value;
@@ -155,5 +148,18 @@
         return false;
     }
 </script>
+<script>
+  function confirmEdit() {
+      var confirmed = confirm("게시물을 수정할까요?");
+
+      if (confirmed) {
+          alert("수정되었습니다");
+          return true;
+      } else {
+          return false;
+      }
+  }
+</script>
+
 </body>
 </html>
